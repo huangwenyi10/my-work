@@ -8,9 +8,10 @@ import javax.jms.Destination;
 import javax.jms.JMSException;
 import javax.jms.TextMessage;
 
-
+@Component("consumerService")
 public class ConsumerServiceImpl implements ConsumerService{
 
+    @Autowired
     private JmsTemplate jmsTemplate;
 
     public JmsTemplate getJmsTemplate() {
