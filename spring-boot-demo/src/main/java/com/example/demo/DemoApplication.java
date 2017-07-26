@@ -1,24 +1,19 @@
 package com.example.demo;
 
-import com.example.mq.test.MsgSender;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
+import org.junit.runner.RunWith;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.jms.core.JmsTemplate;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+
+@RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootApplication
-public class DemoApplication implements CommandLineRunner {
-
-	@Autowired
-	JmsTemplate jmsTemplate;
+@ContextConfiguration("/spring-mvc.xml")
+public class DemoApplication{
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-	@Override
-	public void run(String... strings) throws Exception {
-		jmsTemplate.send("myQueue", new MsgSender());
-	}
 }
