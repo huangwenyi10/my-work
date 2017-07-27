@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/appmessage")
 public class APPMessageController {
 
-
     private AppMessageService appMessageService;
 
     @RequestMapping("/getThree")
