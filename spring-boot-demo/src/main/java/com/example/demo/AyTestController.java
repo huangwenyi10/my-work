@@ -2,6 +2,7 @@ package com.example.demo;
 
 import io.swagger.annotations.ApiOperation;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value="/hello")
 @EnableAutoConfiguration
+@EnableScheduling
 public class AyTestController {
 
     @RequestMapping("/ay")

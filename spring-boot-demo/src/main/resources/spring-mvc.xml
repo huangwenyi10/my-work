@@ -18,6 +18,8 @@
     <aop:config proxy-target-class="true"/>
     <context:annotation-config/>
 
+    <import resource="spring-quartz.xml"/>
+
 
     <!-- 配置JMS连接工厂 -->
     <bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
