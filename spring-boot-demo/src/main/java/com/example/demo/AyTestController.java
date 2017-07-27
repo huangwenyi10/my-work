@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import io.swagger.annotations.ApiOperation;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,11 +10,19 @@ import org.springframework.web.bind.annotation.RestController;
  * @date   2017/1/24.
  */
 @RestController
+@RequestMapping(value="/hello")
 @EnableAutoConfiguration
 public class AyTestController {
 
-    @RequestMapping("/hello")
+    @RequestMapping("/ay")
+    @ApiOperation(value = "ay",httpMethod ="GET", response = String.class,notes = "index")
     public String index(){
+        return "Hello Ay...";
+    }
+
+    @RequestMapping("/test")
+    @ApiOperation(value = "test",httpMethod ="GET", response = String.class,notes = "index")
+    public String test(){
         return "Hello Ay...";
     }
 }
