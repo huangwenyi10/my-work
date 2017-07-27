@@ -33,6 +33,7 @@ public class DemoApplicationTests {
 	@Test
 	public void myBatisTest(){
 		List<AppMessage> lists = appMessageService.getAllMessage();
+		System.out.println(lists.size());
 		System.out.println("success");
 	}
 

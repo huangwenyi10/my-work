@@ -9,6 +9,8 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
 @Component
 public class AppMessageService implements IAppMessageService {
 
@@ -17,7 +19,7 @@ public class AppMessageService implements IAppMessageService {
 
     @Override
     public List<AppMessage> getMessage(){
-        List<AppMessage> list = new ArrayList<AppMessage>();
+        List<AppMessage> list = new ArrayList<>();
         list.add(appMessageMapper.selectByPrimaryKey("xtt"));
         //list = mapper.selectAll();
         return list;
@@ -25,7 +27,7 @@ public class AppMessageService implements IAppMessageService {
 
     @Override
     public List<AppMessage> getAllMessage(){
-        List<AppMessage> list = new ArrayList<AppMessage>();
+        List<AppMessage> list = new ArrayList<>();
         list = appMessageMapper.selectAll();
         return list;
     }
