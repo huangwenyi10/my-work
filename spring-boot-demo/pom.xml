@@ -44,6 +44,8 @@
 			<groupId>org.apache.activemq</groupId>
 			<artifactId>activemq-client</artifactId>
 		</dependency>
+		<!-- ActiveMQ dependency end-->
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
