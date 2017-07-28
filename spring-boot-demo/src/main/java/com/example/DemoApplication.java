@@ -14,7 +14,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootApplication
 @ImportResource(locations={"classpath:spring-mvc.xml"})
-@EnableScheduling
 @ServletComponentScan
 public class DemoApplication{
 
