@@ -11,8 +11,8 @@
         <!--false表示等上一个任务执行完后再开启新的任务-->
         <property name="concurrent" value="false"/>
         <property name="targetObject">
-            <ref bean="taskJob"/>
-        </property>
+        <ref bean="taskJob"/>
+    </property>
         <property name="targetMethod">
             <value>run</value>
         </property>

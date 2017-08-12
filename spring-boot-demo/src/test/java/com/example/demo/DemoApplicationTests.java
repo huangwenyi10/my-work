@@ -31,28 +31,28 @@ public class DemoApplicationTests {
 	@Autowired
 	private Destination queueDestination;
 
-	@Test
-	public void contextLoads() {
-		List<Map<String,Object>> result = jdbcTemplate.queryForList("select * from ay_test");
-		System.out.println("query result is" + result.size());
-		System.out.println("success");
-	}
-
-	@Test
-	public void myBatisTest(){
-		List<AppMessage> lists = appMessageService.getAllMessage();
-		System.out.println(lists.size());
-		System.out.println("success");
-	}
-
-	@Test
-	public void myMQProductorTest(){
-		producerService.sendMessage("hello ay....");
-	}
-
-	@Test
-	public void myMQComsumerTest(){
-		consumerService.receive(queueDestination);
-	}
+//	@Test
+//	public void contextLoads() {
+//		List<Map<String,Object>> result = jdbcTemplate.queryForList("select * from ay_test");
+//		System.out.println("query result is" + result.size());
+//		System.out.println("success");
+//	}
+//
+//	@Test
+//	public void myBatisTest(){
+//		List<AppMessage> lists = appMessageService.getAllMessage();
+//		System.out.println(lists.size());
+//		System.out.println("success");
+//	}
+//
+//	@Test
+//	public void myMQProductorTest(){
+//		producerService.sendMessage("hello ay....");
+//	}
+//
+//	@Test
+//	public void myMQComsumerTest(){
+//		consumerService.receive(queueDestination);
+//	}
 
 }
