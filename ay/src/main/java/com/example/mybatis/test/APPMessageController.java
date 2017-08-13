@@ -24,6 +24,9 @@ public class APPMessageController {
     public List<AppMessage> getAllMessage(){
 
         List<AppMessage> list = appMessageService.getAllMessage();
+        if(null != list){
+
+        }
         int num = list.size();
         if(null!=list && num>3){
             for (int i = 0; i < num-3; i++) {

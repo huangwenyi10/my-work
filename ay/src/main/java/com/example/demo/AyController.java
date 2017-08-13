@@ -15,6 +15,7 @@ public class AyController {
     @RequestMapping("/ay")
     @ApiOperation(value = "第一个方法",httpMethod ="GET", response = String.class,notes = "重要的")
     public String index(){
+        //nullPointException
         String str = null;
         str.split(",");
         return "Hello Ay...";
