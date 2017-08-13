@@ -7,6 +7,14 @@ package com.example.java.test;
  */
 public class AyTest {
 
+    public static void main(String[] args) {
+        System.out.println("hello");
+        System.out.println("hello");
+        System.out.println("hello world");
+        System.out.println("hello");
+        String str = null;
+        String abc  = null;
+    }
 }
 
 interface A{
