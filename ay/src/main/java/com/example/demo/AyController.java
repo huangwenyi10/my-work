@@ -16,6 +16,7 @@ public class AyController {
     @ApiOperation(value = "第一个方法",httpMethod ="GET", response = String.class,notes = "重要的")
     public String index(){
         String str = null;
+        str.split(",");
         return "Hello Ay...";
     }
 
