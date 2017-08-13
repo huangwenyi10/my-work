@@ -9,10 +9,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SpringConfig {
 
-    @Bean(name = "annotationTest")
-    public AnnotationTest annotationTest(){
-        return  new AnnotationTest();
-    }
+//    @Bean(name = "annotationTest")
+//    public AnnotationTest annotationTest(){
+//        return  new AnnotationTest();
+//    }
 
 
 }
