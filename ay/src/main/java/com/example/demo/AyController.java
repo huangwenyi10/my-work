@@ -4,8 +4,7 @@ import com.example.IntellijIDEA.test.AyTest;
 import com.example.IntellijIDEA.test.AyTestService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Created by Ay on 2017/1/24.
@@ -32,4 +31,14 @@ public class AyController {
     public String index2(){
         return "Hello Ay...";
     }
+
+    @RequestMapping("/love")
+    @ResponseBody
+    public AyTest index3(@RequestParam String name,@RequestParam String id){
+        AyTest ayTest = new AyTest();
+        ayTest.setId("001");
+        ayTest.setName("ay");
+        return ayTest;
+    }
+
 }
