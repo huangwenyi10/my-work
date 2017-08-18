@@ -1,10 +1,8 @@
-package com.example.IntellijIDEA.test;
+package com.example.intellij.test;
 
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.List;
-import com.example.IntellijIDEA.test.AyTest;
-import com.example.IntellijIDEA.test.AyTestDao;
 
 @Service
 public class AyTestService{

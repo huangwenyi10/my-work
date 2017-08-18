@@ -1,10 +1,9 @@
-package com.example.IntellijIDEA.test;
+package com.example.intellij.test;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
-import com.example.IntellijIDEA.test.AyTest;
 
 @Mapper
 public interface AyTestDao {

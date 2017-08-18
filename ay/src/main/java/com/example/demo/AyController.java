@@ -1,7 +1,7 @@
 package com.example.demo;
 
-import com.example.IntellijIDEA.test.AyTest;
-import com.example.IntellijIDEA.test.AyTestService;
+import com.example.intellij.test.AyTest;
+import com.example.intellij.test.AyTestService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
