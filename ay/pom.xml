@@ -168,11 +168,12 @@
 		</dependency>
 		<!-- 引入log4j2依赖  end-->
 
+		<!-- mongodb start -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
-
+		<!-- mongodb end -->
 	</dependencies>
 
 	<build>

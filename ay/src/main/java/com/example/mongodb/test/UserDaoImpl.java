@@ -12,13 +12,14 @@ import java.util.List;
 @Component
 public class UserDaoImpl {
 
-
     @Autowired
     private MongoTemplate mongoTemplate;
 
-    public List<AyTest> getAll(){
-        mongoTemplate.findById("1",AyTest.class);
-        return mongoTemplate.findAll(null);
+    public void save(){
+        AyTest ayTest = new AyTest();
+        ayTest.setId("2");
+        ayTest.setName("al");
+        mongoTemplate.save(ayTest);
     }
 
 }

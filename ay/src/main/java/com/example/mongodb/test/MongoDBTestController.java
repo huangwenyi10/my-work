@@ -16,14 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/mongo")
 public class MongoDBTestController {
 
-
     @Autowired
     private UserDaoImpl userDaoImpl;
 
-
     @RequestMapping("/al")
     public String index2(){
-        userDaoImpl.getAll();
+        userDaoImpl.save();
         return "Hello Ay...";
     }
 

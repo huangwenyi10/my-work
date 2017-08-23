@@ -1,8 +1,6 @@
 package com.example.mongodb.test;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import org.springframework.data.mongodb.core.mapping.Document;
 import javax.persistence.Id;
 
 /**
@@ -10,7 +8,7 @@ import javax.persistence.Id;
  * @author Ay
  * @date   2017/08/22
  */
-@Entity
+@Document
 public class AyTest {
 
     @Id
