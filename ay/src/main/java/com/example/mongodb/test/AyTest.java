@@ -1,16 +1,20 @@
-package com.example.intellij.test;
+package com.example.mongodb.test;
 
-import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
- * Created by Ay on 2017/8/13.
+ * 描述：
+ * @author Ay
+ * @date   2017/08/22
  */
+@Entity
 public class AyTest {
 
-    //alt + insert
+    @Id
     private String id;
-
-    @Column(nullable = false,length = 5)
     private String name;
 
     public String getId() {
