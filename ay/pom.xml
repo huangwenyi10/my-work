@@ -194,6 +194,13 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 		<!-- spring boot监控 end -->
+		<!-- spring boot监控 start -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<!-- spring boot监控 end -->
+
 
 	</dependencies>
 
