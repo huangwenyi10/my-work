@@ -1,10 +1,9 @@
-package com.example.springdata.test;
+package com.example.batch.test;
+
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.io.Serializable;
 
 /**
  * 描述：
@@ -12,11 +11,19 @@ import java.io.Serializable;
  * @date   2017/08/22
  */
 @Entity
-public class AyTest implements Serializable{
+public class AyTest {
 
     @Id
     private String id;
     private String name;
+
+
+    public AyTest(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public AyTest(){}
 
     public String getId() {
         return id;

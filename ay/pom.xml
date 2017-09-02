@@ -201,6 +201,26 @@
 		</dependency>
 		<!-- spring boot监控 end -->
 
+		<!-- batch start -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-batch</artifactId>
+		</dependency>
+		<!-- batch end -->
+
+		<!-- security start -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		<!-- security end -->
+
+		<!-- cache start-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-cache</artifactId>
+		</dependency>
+		<!-- cache end -->
 
 	</dependencies>
 
