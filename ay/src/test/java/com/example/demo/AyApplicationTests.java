@@ -3,6 +3,7 @@ package com.example.demo;
 import com.example.annotation.test.AnnotationTest;
 import com.example.mq.test.ConsumerService;
 import com.example.mq.test.ProducerService;
+import com.example.rmi.test.RMIExService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,6 +52,14 @@ public class AyApplicationTests {
 		System.out.println(annotationTest.getId());
 		System.out.println(annotationTest.getName());
 		System.out.println(API_KEY);
+	}
+
+	@Autowired
+	private RMIExService rmiExService;
+
+	@Test
+	public void rmiTest(){
+		rmiExService.invokingRemoteService();
 	}
 
 }
