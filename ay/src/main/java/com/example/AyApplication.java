@@ -1,7 +1,6 @@
 package com.example;
 
 import com.example.rmi.test.RMIExService;
-import de.codecentric.boot.admin.config.EnableAdminServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
@@ -21,7 +20,6 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @EnableRetry
 @EnableAsync
 @EnableCaching
-@EnableAdminServer
 public class AyApplication {
 
 	public static void main(String[] args) {
