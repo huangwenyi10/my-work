@@ -18,6 +18,7 @@ public class AyTestApplicationTests {
 	@Qualifier("rmiService")
 	private RmiProxyFactoryBean factoryBean;
 
+
 	@Test
 	public void test() {
 		RMIExService service=(RMIExService)factoryBean.getObject();
