@@ -6,7 +6,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>ay_test</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>ay_test</name>
 	<description>Demo project for Spring Boot</description>
