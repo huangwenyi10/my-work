@@ -13,11 +13,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class AyTestApplicationTests {
 
-	@Autowired
-	@Qualifier("rMIExService")
-	private RMIExService rMIExService;
 
 	@Autowired
+	@Qualifier("rmiService")
 	private RmiProxyFactoryBean factoryBean;
 
 	@Test

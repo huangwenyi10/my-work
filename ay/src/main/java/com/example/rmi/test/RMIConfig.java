@@ -13,7 +13,6 @@ import org.springframework.remoting.rmi.RmiServiceExporter;
 public class RMIConfig {
 
     @Autowired
-    @Qualifier("rMIExService")
     private RMIExServiceImpl rMIExService;
     /**
      * 方法描述：
@@ -23,11 +22,12 @@ public class RMIConfig {
      */
     @Bean
     public RmiServiceExporter initRmiServiceExporter(){
+        System.out.println("---------------------------------------");
         RmiServiceExporter exporter=new RmiServiceExporter();
         exporter.setServiceInterface(RMIExService.class);
-        exporter.setServiceName("rmiService");
+        exporter.setServiceName("jmxrmi");
         exporter.setService(rMIExService);
-        exporter.setServicePort(6666);
+        exporter.setServicePort(1099);
         return exporter;
     }
 }

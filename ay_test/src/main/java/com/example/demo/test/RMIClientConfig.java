@@ -9,14 +9,14 @@ import org.springframework.remoting.rmi.RmiProxyFactoryBean;
  */
 @Configuration
 public class RMIClientConfig {
-    @Bean
+    @Bean(name="rmiService")
     public RmiProxyFactoryBean initRmiProxyFactoryBean() {
         RmiProxyFactoryBean factoryBean = new RmiProxyFactoryBean();
-        factoryBean.setServiceUrl("rmi://localhost:8080/rmiService");
+        factoryBean.setServiceUrl("rmi://127.0.0.1:1099/jmxrmi");
         factoryBean.setServiceInterface(RMIExService.class);
-        factoryBean.setLookupStubOnStartup(false );
-        factoryBean.setRefreshStubOnConnectFailure(true );
-        factoryBean.afterPropertiesSet();
+//        factoryBean.setLookupStubOnStartup(false );
+//        factoryBean.setRefreshStubOnConnectFailure(true );
+//        factoryBean.afterPropertiesSet();
         return factoryBean;
     }
 }
