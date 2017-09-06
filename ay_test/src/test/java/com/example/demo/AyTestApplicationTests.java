@@ -21,8 +21,9 @@ public class AyTestApplicationTests {
 
 	@Test
 	public void test() {
-		RMIExService service=(RMIExService)factoryBean.getObject();
+		RMIExService service = (RMIExService)factoryBean.getObject();
 		System.out.println(service.invokingRemoteService());
+		System.out.println(service.sayHello());
 	}
 
 }
