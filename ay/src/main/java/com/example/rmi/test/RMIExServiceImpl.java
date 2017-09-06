@@ -12,10 +12,17 @@ import javax.annotation.PostConstruct;
 @Component("rMIExService")
 public class RMIExServiceImpl implements RMIExService{
 
+
+    @Override
+    public String sayHello() {
+        return "hello ay";
+    }
+
     @PostConstruct
     public void initMethod(){
         System.out.println("我是初始化方法时调用的");
     }
+
     @Override
     public String invokingRemoteService() {
         // TODO Auto-generated method stub

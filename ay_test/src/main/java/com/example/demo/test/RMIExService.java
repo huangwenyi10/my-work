@@ -6,4 +6,6 @@ package com.example.demo.test;
 public interface RMIExService {
 
     String invokingRemoteService();
+
+    String sayHello();
 }
