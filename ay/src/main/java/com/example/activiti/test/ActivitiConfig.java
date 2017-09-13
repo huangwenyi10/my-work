@@ -16,6 +16,7 @@ import java.io.IOException;
 @Configuration
 public class ActivitiConfig extends AbstractProcessEngineAutoConfiguration {
 
+
     //注入数据源和事务管理器
     @Bean
     public SpringProcessEngineConfiguration springProcessEngineConfiguration(
