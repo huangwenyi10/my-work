@@ -1,6 +1,7 @@
-package com.example.demo;
+package com.example;
 
-import com.example.demo.test.RMIExService;
+import com.example.dubbo.test.UserDubboConsumerService;
+import com.example.test.RMIExService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,14 @@ public class AyTestApplicationTests {
 		RMIExService service = (RMIExService)factoryBean.getObject();
 		System.out.println(service.invokingRemoteService());
 		System.out.println(service.sayHello());
+	}
+
+	@Autowired
+	private UserDubboConsumerService userDubboConsumerService;
+
+	@Test
+	public void dubboTest() {
+		userDubboConsumerService.getUserByName("ay");
 	}
 
 }

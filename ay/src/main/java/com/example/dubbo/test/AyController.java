@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.dubbo.test;
 
 import com.example.intellij.test.AyTest;
 import com.example.intellij.test.AyTestService;

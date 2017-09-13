@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.dubbo.test;
 
 import com.example.annotation.test.AnnotationTest;
 import com.example.mq.test.ConsumerService;

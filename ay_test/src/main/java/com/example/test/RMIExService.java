@@ -1,4 +1,4 @@
-package com.example.demo.test;
+package com.example.test;
 
 /**
  * Created by Ay on 2017/9/3.
