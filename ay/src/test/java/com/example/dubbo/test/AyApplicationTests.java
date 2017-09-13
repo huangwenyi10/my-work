@@ -4,6 +4,7 @@ import com.example.annotation.test.AnnotationTest;
 import com.example.mq.test.ConsumerService;
 import com.example.mq.test.ProducerService;
 import com.example.rmi.test.RMIExService;
+import org.activiti.engine.RuntimeService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,6 +61,15 @@ public class AyApplicationTests {
 	@Test
 	public void rmiTest(){
 		rmiExService.invokingRemoteService();
+	}
+
+	@Autowired
+	RuntimeService runtimeService;
+
+	@Test
+	public void activitiTest(){
+		long count = runtimeService.createProcessInstanceQuery().count();
+		System.out.println(count);
 	}
 
 }
