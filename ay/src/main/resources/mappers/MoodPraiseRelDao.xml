@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.praise.project.dao.MoodPraiseRelDao">
+    <!--auto generated Code-->
+    <resultMap id="AllColumnMap" type="com.example.praise.project.model.MoodPraiseRel">
+        <result column="id" property="id"/>
+        <result column="user_id" property="user_id"/>
+        <result column="mood_id" property="mood_id"/>
+        <result column="is_parise" property="is_parise"/>
+        <result column="praise_time" property="praise_time"/>
+    </resultMap>
+
+    <!--auto generated Code-->
+    <sql id="all_column">
+        `id`,
+        `user_id`,
+        `mood_id`,
+        `is_parise`,
+        `praise_time`
+    </sql>
+
+    <!--auto generated Code-->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="pojo.id">
+        INSERT INTO mood_praise_rel (
+            `id`,
+            `user_id`,
+            `mood_id`,
+            `is_parise`,
+            `praise_time`
+        ) VALUES (
+            #{pojo.id},
+            #{pojo.user_id},
+            #{pojo.mood_id},
+            #{pojo.is_parise},
+            #{pojo.praise_time}
+        )
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertSelective" useGeneratedKeys="true" keyProperty="pojo.id">
+        INSERT INTO mood_praise_rel
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.id!=null"> `id`,</if>
+            <if test="pojo.user_id!=null"> `user_id`,</if>
+            <if test="pojo.mood_id!=null"> `mood_id`,</if>
+            <if test="pojo.is_parise!=null"> `is_parise`,</if>
+            <if test="pojo.praise_time!=null"> `praise_time`,</if>
+        </trim>
+        VALUES
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pojo.id!=null">#{pojo.id},</if>
+            <if test="pojo.user_id!=null">#{pojo.user_id},</if>
+            <if test="pojo.mood_id!=null">#{pojo.mood_id},</if>
+            <if test="pojo.is_parise!=null">#{pojo.is_parise},</if>
+            <if test="pojo.praise_time!=null">#{pojo.praise_time},</if>
+        </trim>
+    </insert>
+
+    <!--auto generated Code-->
+    <insert id="insertList">
+        INSERT INTO mood_praise_rel (
+        <include refid="all_column"/>
+        )VALUES
+        <foreach collection="pojos" item="pojo" index="index" separator=",">
+            (
+            #{pojo.id},
+            #{pojo.user_id},
+            #{pojo.mood_id},
+            #{pojo.is_parise},
+            #{pojo.praise_time}
+            )
+        </foreach>
+    </insert>
+
+    <!--auto generated Code-->
+    <update id="update">
+        UPDATE mood_praise_rel
+        <set>
+            <if test="pojo.id != null"> `id` = #{pojo.id}, </if>
+            <if test="pojo.user_id != null"> `user_id` = #{pojo.user_id}, </if>
+            <if test="pojo.mood_id != null"> `mood_id` = #{pojo.mood_id}, </if>
+            <if test="pojo.is_parise != null"> `is_parise` = #{pojo.is_parise}, </if>
+            <if test="pojo.praise_time != null"> `praise_time` = #{pojo.praise_time} </if>
+        </set>
+        WHERE id = #{pojo.id}
+    </update>
+</mapper>
+

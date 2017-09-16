@@ -7,6 +7,7 @@
         <result column="content" property="content"/>
         <result column="praise_num" property="praise_num"/>
         <result column="user_id" property="user_id"/>
+        <result column="publish_time" property="publish_time"/>
     </resultMap>
 
     <!--auto generated Code-->
@@ -76,5 +77,11 @@
         </set>
         WHERE id = #{pojo.id}
     </update>
+
+    <select id="getMoodById" resultMap="AllColumnMap" parameterType="String">
+
+        SELECT <include refid="all_column"/> FROM mood m
+        WHERE m.id = #{id}
+    </select>
 </mapper>
 

@@ -6,8 +6,7 @@ import com.example.praise.project.service.MoodService;
 import com.example.praise.project.service.UserService;
 import com.example.praise.project.util.UuidUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 /**
@@ -33,6 +32,19 @@ public class MoodController {
         mood.setUser_id(UuidUtil.generateUUID());
         moodService.insert(mood);
         return "Hello Ay...";
+    }
+
+    @RequestMapping(value = "/getMoodList",method = RequestMethod.GET)
+    public String getMoodList() throws Exception{
+
+        System.out.println("11111");
+        return "Hello Ay...";
+    }
+
+    @RequestMapping(value = "/getMoodById",method = RequestMethod.GET)
+    public Mood getMoodById() throws Exception{
+
+        return moodService.getMoodById("67ff4377040248409ff49eb2ab90203f");
     }
 
 }

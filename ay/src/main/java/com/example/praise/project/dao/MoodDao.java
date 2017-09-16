@@ -15,4 +15,6 @@ public interface MoodDao {
     int insertList(@Param("pojos") List<Mood> pojo);
 
     int update(@Param("pojo") Mood pojo);
+
+    Mood getMoodById(@Param("id")String id);
 }

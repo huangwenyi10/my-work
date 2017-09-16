@@ -28,4 +28,8 @@ public class MoodService{
     public int update(Mood pojo){
         return moodDao.update(pojo);
     }
+
+    public Mood getMoodById(String id){
+        return moodDao.getMoodById(id);
+    }
 }

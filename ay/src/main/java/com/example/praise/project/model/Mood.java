@@ -1,5 +1,7 @@
 package com.example.praise.project.model;
 
+import java.util.Date;
+
 /**
  * 描述：说说
  * Created by Ay on 2017/9/16.
@@ -23,6 +25,10 @@ public class Mood {
      * 用户id
      */
     private String user_id;
+    /**
+     * 发表时间
+     */
+    private Date publishTime;
 
     public String getId() {
         return id;
@@ -54,5 +60,13 @@ public class Mood {
 
     public void setUser_id(String user_id) {
         this.user_id = user_id;
+    }
+
+    public Date getPublishTime() {
+        return publishTime;
+    }
+
+    public void setPublishTime(Date publishTime) {
+        this.publishTime = publishTime;
     }
 }
