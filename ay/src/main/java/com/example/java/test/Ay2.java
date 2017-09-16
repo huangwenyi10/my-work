@@ -1,14 +1,9 @@
 package com.example.java.test;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /**
  * Created by Ay on 2017/8/24.
  */
-public class Ay {
-
-    static Logger logger = LoggerFactory.getLogger(Ay.class);
+public class Ay2 {
 
     public static void main(String[] args) {
 
@@ -22,8 +17,5 @@ public class Ay {
         String str2 = "ab" + "c";
         String str3 = "ab" + str1;
         System.out.println(str2==str3);
-
-        logger.debug("I am Debug ");
-        logger.debug("");
     }
 }
