@@ -84,5 +84,25 @@
         </set>
         WHERE id = #{pojo.id}
     </update>
+
+    <select id="findByMoodIdAndUserId" resultMap="AllColumnMap" parameterType="com.example.praise.project.dto.MoodPraiseRelDTO">
+        SELECT <include refid="all_column"/>
+        FROM mood_praise_rel mpr
+        WHERE  mpr.user_id =  #{pojo.user_id} and mpr.mood_id = #{pojo.mood_id}
+    </select>
+
+
+    <select id="findCountByMoodIdAndUserId" resultType="Integer" parameterType="com.example.praise.project.dto.MoodPraiseRelDTO">
+        SELECT COUNT(*)
+        FROM mood_praise_rel mpr
+        WHERE  mpr.user_id =  #{pojo.user_id} and mpr.mood_id = #{pojo.mood_id}
+    </select>
+
+
+    <select id="findCountByMoodId" resultType="Integer" parameterType="com.example.praise.project.dto.MoodPraiseRelDTO">
+        SELECT COUNT(*)
+        FROM mood_praise_rel mpr
+        WHERE mpr.mood_id = #{pojo.mood_id}
+    </select>
 </mapper>
 

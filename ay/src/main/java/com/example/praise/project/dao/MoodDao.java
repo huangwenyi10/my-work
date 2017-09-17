@@ -1,5 +1,6 @@
 package com.example.praise.project.dao;
 
+import com.example.praise.project.dto.MoodDTO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -16,5 +17,5 @@ public interface MoodDao {
 
     int update(@Param("pojo") Mood pojo);
 
-    Mood getMoodById(@Param("id")String id);
+    MoodDTO getMoodById(@Param("id")String id);
 }

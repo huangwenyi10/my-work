@@ -1,12 +1,15 @@
 package com.example.praise.project.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * 描述：说说
  * Created by Ay on 2017/9/16.
  */
-public class Mood {
+public class Mood implements Serializable{
+
+
 
 
     /**
@@ -28,7 +31,7 @@ public class Mood {
     /**
      * 发表时间
      */
-    private Date publishTime;
+    private Date publish_time;
 
     public String getId() {
         return id;
@@ -62,11 +65,11 @@ public class Mood {
         this.user_id = user_id;
     }
 
-    public Date getPublishTime() {
-        return publishTime;
+    public Date getPublish_time() {
+        return publish_time;
     }
 
-    public void setPublishTime(Date publishTime) {
-        this.publishTime = publishTime;
+    public void setPublish_time(Date publish_time) {
+        this.publish_time = publish_time;
     }
 }

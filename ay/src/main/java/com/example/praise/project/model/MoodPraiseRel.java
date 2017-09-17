@@ -1,5 +1,6 @@
 package com.example.praise.project.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -7,7 +8,7 @@ import java.util.Date;
  * @author ay
  * @date  2017/9/16
  */
-public class MoodPraiseRel {
+public class MoodPraiseRel implements Serializable{
 
 
     /**

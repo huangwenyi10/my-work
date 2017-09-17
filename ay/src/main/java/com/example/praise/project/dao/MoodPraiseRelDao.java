@@ -1,5 +1,6 @@
 package com.example.praise.project.dao;
 
+import com.example.praise.project.dto.MoodPraiseRelDTO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -15,4 +16,10 @@ public interface MoodPraiseRelDao {
     int insertList(@Param("pojos") List<MoodPraiseRel> pojo);
 
     int update(@Param("pojo") MoodPraiseRel pojo);
+
+    List<MoodPraiseRelDTO> findByMoodIdAndUserId(@Param("pojo") MoodPraiseRel pojo);
+
+    int findCountByMoodIdAndUserId(@Param("pojo") MoodPraiseRel pojo);
+
+    int findCountByMoodId(@Param("pojo") MoodPraiseRel pojo);
 }

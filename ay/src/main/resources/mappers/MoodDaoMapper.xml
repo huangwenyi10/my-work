@@ -2,12 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.example.praise.project.dao.MoodDao">
     <!--auto generated Code-->
-    <resultMap id="AllColumnMap" type="com.example.praise.project.model.Mood">
+    <resultMap id="AllColumnMap" type="com.example.praise.project.dto.MoodDTO">
         <result column="id" property="id"/>
         <result column="content" property="content"/>
         <result column="praise_num" property="praise_num"/>
         <result column="user_id" property="user_id"/>
         <result column="publish_time" property="publish_time"/>
+        <result column="account" property="account"/>
     </resultMap>
 
     <!--auto generated Code-->
@@ -16,6 +17,7 @@
         `content`,
         `praise_num`,
         `user_id`
+
     </sql>
 
     <!--auto generated Code-->
@@ -78,9 +80,11 @@
         WHERE id = #{pojo.id}
     </update>
 
-    <select id="getMoodById" resultMap="AllColumnMap" parameterType="String">
 
-        SELECT <include refid="all_column"/> FROM mood m
+    <select id="getMoodById" resultMap="AllColumnMap" parameterType="String">
+        SELECT m.id , m.content ,m.praise_num , m.user_id , u.account ,m.publish_time
+        FROM mood m
+        LEFT JOIN user u on m.user_id = u.id
         WHERE m.id = #{id}
     </select>
 </mapper>

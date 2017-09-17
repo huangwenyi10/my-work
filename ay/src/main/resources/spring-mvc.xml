@@ -19,6 +19,7 @@
     <context:annotation-config/>
     <!-- 利用import引入定时器的文件 -->
     <import resource="spring-quartz.xml"/>
+    <import resource="spring-quartz-praise.xml"/>
 
     <import resource="spring-mq.xml"/>
 
