@@ -72,6 +72,24 @@
         </foreach>
     </insert>
 
+
+    <!--auto generated Code-->
+    <insert id="insertSet">
+        INSERT INTO mood_praise_rel (
+        <include refid="all_column"/>
+        )VALUES
+        <foreach collection="pojos" item="pojo" index="index" separator=",">
+            (
+            #{pojo.id},
+            #{pojo.user_id},
+            #{pojo.mood_id},
+            #{pojo.is_parise},
+            #{pojo.praise_time}
+            )
+        </foreach>
+    </insert>
+
+
     <!--auto generated Code-->
     <update id="update">
         UPDATE mood_praise_rel

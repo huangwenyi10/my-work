@@ -69,6 +69,21 @@
     </insert>
 
     <!--auto generated Code-->
+    <insert id="insertSet">
+        INSERT INTO mood (
+        <include refid="all_column"/>
+        )VALUES
+        <foreach collection="pojos" item="pojo" index="index" separator=",">
+            (
+            #{pojo.id},
+            #{pojo.content},
+            #{pojo.praise_num},
+            #{pojo.user_id}
+            )
+        </foreach>
+    </insert>
+
+    <!--auto generated Code-->
     <update id="update">
         UPDATE mood
         <set>
@@ -78,6 +93,17 @@
             <if test="pojo.user_id != null"> `user_id` = #{pojo.user_id} </if>
         </set>
         WHERE id = #{pojo.id}
+    </update>
+
+    <update id="batchUpdate"  parameterType="java.util.Set">
+        <foreach collection="pojo" item="item" index="index" open="" close="" separator=";">
+            UPDATE mood
+            <set>
+                praise_num=#{item.praise_num}
+            </set>
+            where id = #{item.id}
+        </foreach>
+
     </update>
 
 

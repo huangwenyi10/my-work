@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.Set;
 
 import com.example.praise.project.dao.MoodDao;
 
@@ -32,8 +33,16 @@ public class MoodService{
         return moodDao.insertList(pojos);
     }
 
+    public int insertSet(Set<Mood> pojos){
+        return moodDao.insertSet(pojos);
+    }
+
     public int update(Mood pojo){
         return moodDao.update(pojo);
+    }
+
+    public int batchUpdate(Set<Mood> pojos){
+        return moodDao.batchUpdate(pojos);
     }
 
     public MoodDTO getMoodById(String id){

@@ -11,6 +11,7 @@ import java.util.Date;
 public class MoodPraiseRel implements Serializable{
 
 
+    private static final long serialVersionUID = 2420938249221563579L;
     /**
      * 主键
      */
@@ -71,5 +72,25 @@ public class MoodPraiseRel implements Serializable{
 
     public void setPraise_time(Date praise_time) {
         this.praise_time = praise_time;
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        MoodPraiseRel that = (MoodPraiseRel) o;
+
+        if (user_id != null ? !user_id.equals(that.user_id) : that.user_id != null) return false;
+        return mood_id != null ? mood_id.equals(that.mood_id) : that.mood_id == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = user_id != null ? user_id.hashCode() : 0;
+        result = 31 * result + (mood_id != null ? mood_id.hashCode() : 0);
+        return result;
     }
 }

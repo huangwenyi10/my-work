@@ -51,4 +51,18 @@ public class HelloRedisTestController {
         System.out.println(redisTemplate.opsForSet().members("123"));
         return "Hello Ay...";
     }
+
+    /**
+     * 描述：数据类型为hashset测试
+     * @return
+     */
+    @RequestMapping("/hashset")
+    public String hashset(){
+        stringRedisTemplate.opsForHash().put("myhashset","a","a");
+        stringRedisTemplate.opsForHash().put("myhashset","b","b");
+        stringRedisTemplate.opsForHash().put("myhashset","c","c");
+        stringRedisTemplate.opsForHash().put("myhashset","d","d");
+        return "Hello Ay...";
+    }
+
 }

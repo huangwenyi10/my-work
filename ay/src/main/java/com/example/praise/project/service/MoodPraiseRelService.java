@@ -11,8 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 import com.example.praise.project.dao.MoodPraiseRelDao;
 import org.springframework.transaction.annotation.Transactional;
@@ -31,15 +30,14 @@ public class MoodPraiseRelService{
     @Autowired
     private RedisTemplate redisTemplate;
 
-
     @Transactional
-    public int insert(MoodPraiseRel pojo){
+    public long insert(MoodPraiseRel pojo){
         //1.保存到关联表中
         pojo.setId(UuidUtil.generateUUID());
         pojo.setPraise_time(new Date());
         moodPraiseRelDao.insert(pojo);
         //2.更新说说表中的点赞数量
-        int count = moodPraiseRelDao.findCountByMoodId(pojo);
+        long count = moodPraiseRelDao.findCountByMoodId(pojo);
         Mood mood = new Mood();
         mood.setId(pojo.getMood_id());
         mood.setPraise_num(count);
@@ -75,19 +73,21 @@ public class MoodPraiseRelService{
     }
 
 
+    private static final String PRAISE_HASH_KEY = "com.example.praise.project.key";
+
     public long insertForRedis(MoodPraiseRel pojo){
+
         //设置点赞时间
         pojo.setPraise_time(new Date());
+        pojo.setId(UuidUtil.generateUUID());
 
-        //选择set集合类型来存放数据
-        //1.讲点赞数据存放到redis中
+        //1.存放到hashmap中
+        redisTemplate.opsForSet().add(PRAISE_HASH_KEY , pojo.getMood_id());
+        //2.存放到set中
         redisTemplate.opsForSet().add(pojo.getMood_id(),pojo);
-
-        logger.info(redisTemplate.opsForSet().members(pojo.getMood_id()));
 
         //计算说说的点赞数量
         long count = redisTemplate.opsForSet().size(pojo.getMood_id());
-
         logger.info("mood_id is :" + pojo.getMood_id() + "and praise num is" + count);
         return count;
     }
@@ -100,6 +100,10 @@ public class MoodPraiseRelService{
 
     public int insertList(List<MoodPraiseRel> pojos){
         return moodPraiseRelDao.insertList(pojos);
+    }
+
+    public int insertSet(Set<MoodPraiseRel> pojos){
+        return moodPraiseRelDao.insertSet(pojos);
     }
 
     public int update(MoodPraiseRel pojo){

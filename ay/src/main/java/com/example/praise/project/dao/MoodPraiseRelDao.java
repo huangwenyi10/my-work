@@ -5,6 +5,8 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Set;
+
 import com.example.praise.project.model.MoodPraiseRel;
 
 @Mapper
@@ -14,6 +16,8 @@ public interface MoodPraiseRelDao {
     int insertSelective(@Param("pojo") MoodPraiseRel pojo);
 
     int insertList(@Param("pojos") List<MoodPraiseRel> pojo);
+
+    int insertSet(@Param("pojos") Set<MoodPraiseRel> pojo);
 
     int update(@Param("pojo") MoodPraiseRel pojo);
 

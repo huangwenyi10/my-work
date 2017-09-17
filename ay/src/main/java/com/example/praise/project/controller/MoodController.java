@@ -38,7 +38,7 @@ public class MoodController {
         Mood mood = new Mood();
         mood.setId(UuidUtil.generateUUID());
         mood.setContent("Hello Ay，this is my first mood！");
-        mood.setPraise_num(0);
+        mood.setPraise_num(0L);
         mood.setUser_id(UuidUtil.generateUUID());
         moodService.insert(mood);
         return "Hello Ay...";
@@ -64,7 +64,7 @@ public class MoodController {
      * @throws Exception
      */
     @RequestMapping(value = "/praise",method = RequestMethod.POST ,consumes="application/json;charset=UTF-8")
-    public int praise(@RequestBody MoodPraiseRelDTO moodPraiseRelDTO) throws Exception{
+    public long praise(@RequestBody MoodPraiseRelDTO moodPraiseRelDTO) throws Exception{
         return moodPraiseRelService.insert(moodPraiseRelDTO);
     }
 

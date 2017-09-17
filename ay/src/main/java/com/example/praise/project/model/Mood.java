@@ -23,7 +23,7 @@ public class Mood implements Serializable{
     /**
      * 点赞数量
      */
-    private Integer praise_num;
+    private Long praise_num;
     /**
      * 用户id
      */
@@ -49,11 +49,11 @@ public class Mood implements Serializable{
         this.content = content;
     }
 
-    public Integer getPraise_num() {
+    public Long getPraise_num() {
         return praise_num;
     }
 
-    public void setPraise_num(Integer praise_num) {
+    public void setPraise_num(Long praise_num) {
         this.praise_num = praise_num;
     }
 
