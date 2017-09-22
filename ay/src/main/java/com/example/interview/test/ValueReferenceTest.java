@@ -1,4 +1,4 @@
-package com.example.java.test;
+package com.example.interview.test;
 
 /**
  * @author Ay
