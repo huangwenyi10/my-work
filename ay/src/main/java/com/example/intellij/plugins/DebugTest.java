@@ -1,5 +1,4 @@
 package com.example.intellij.plugins;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,9 +20,9 @@ public class DebugTest implements Serializable{
         test();
 
         List<Integer> list = new ArrayList<>();
-        list.add(1);
         list.add(2);
-        list.add(3);
+        list.add(2);
+        list.add(1);
         list.add(4);
         for(Integer i : list){
             System.out.println(i);
