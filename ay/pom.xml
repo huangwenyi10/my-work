@@ -271,6 +271,15 @@
 			<artifactId>spring-boot-test</artifactId>
 		</dependency>
 
+		<!-- guara 工具类 -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>23.0</version>
+		</dependency>
+
+
+
 	</dependencies>
 
 	<build>
