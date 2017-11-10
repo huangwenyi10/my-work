@@ -13,9 +13,7 @@ public class ReturnAndTryCatchTest {
 
     @Test
     public void test() {
-
         try{
-
             System.out.println("try");
         }catch (Exception e){
 
@@ -130,7 +128,7 @@ public class ReturnAndTryCatchTest {
             return msg;
         }finally {
             msg = "finally";
-            //return msg; //1
+            return msg; //1
         }
 
         //打印结果
@@ -140,7 +138,7 @@ public class ReturnAndTryCatchTest {
         //最终打印的值是：try
 
         //结论
-        //如果finally语句中没有return语句覆盖返回值，那么原来的保存下来的返回值不一定会因为finally里的修
+        //如果finally语句中没有return语句覆盖返回值，那么原来的保存下来的返回值不一定会因为finally里的修改而变化
     }
 
     //结论

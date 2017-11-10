@@ -46,9 +46,9 @@ public class CollectionUtils_Subtract_Test {
     @Test
     public void test2(){
 
-        //数据库中  项目表  和 负责人表    负责人id：1,3,5,7
+        //数据库中  项目表  和 负责人表    负责人id：1,3,5,7.9
 
-        List<Integer> newList = Lists.newArrayList(1,3,5,7,9);
+        List<Integer> newList = Lists.newArrayList(1);
 
         List<Integer> oldList = Lists.newArrayList(1,3,5,7);
 

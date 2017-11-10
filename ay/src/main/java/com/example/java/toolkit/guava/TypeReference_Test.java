@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * 描述：
+ * 描述：TypeReference在Json与对象转换中的使用
  * @author Ay
  * @date   2017-11-01
  *
@@ -21,7 +21,9 @@ public class TypeReference_Test {
     public static ObjectMapper mapper = new ObjectMapper();
 
 
-    public static final TypeReference LIST_STRING = new TypeReference<List<String>>() {};
+    public static final TypeReference LIST_STRING = new TypeReference<List<Person>>() {
+
+    };
 
     @Test
     public void test() throws Exception{

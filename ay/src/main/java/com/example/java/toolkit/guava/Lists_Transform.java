@@ -68,7 +68,7 @@ public class Lists_Transform {
         System.out.println(newAyUserList);
 
 
-        //总结：transform函数返回的List是一个特殊类型的List，只支持遍历，不支持任何修改（增删改移）
+        //总结：transform函数返回的List是一个特殊类型的List，只支持遍历，不支持任何修改（增删）
         //所以，对这个list做的所有修改操作都会抛异常。
     }
 
@@ -94,10 +94,12 @@ class AyUserTransformer{
     public static class AyUserIDTransfer implements Function<AyUser, Integer> {
 
         @Override
-        public Integer apply(AyUser input) {
-            return input.getId();
+        public Integer apply(AyUser ayUser) {
+            return ayUser.getId();
         }
     }
+
+
 
 
     public static final Function<AyUser, NewAyUser> AYUSER_TO_NEWAYUSER_TRANS = new AyUserTONewAyUserTransfer();
@@ -111,12 +113,14 @@ class AyUserTransformer{
         public NewAyUser apply(AyUser ayUser) {
             NewAyUser newAyUser = new NewAyUser();
             newAyUser.setNewId(ayUser.getId());
-            newAyUser.setNewName(ayUser.getName());
+            newAyUser.setNewName("new" + ayUser.getName());
             return newAyUser;
         }
     }
 
 }
+
+
 
 
 class NewAyUser{

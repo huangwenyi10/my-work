@@ -1,9 +1,9 @@
 package com.example.java.test;
 
 
-//import static org.junit.Assert.assertTrue;
-import static java.lang.Integer.MAX_VALUE;
-//import static java.lang.Long.MAX_VALUE;
+import static org.junit.Assert.assertTrue;
+//import static java.lang.Integer.MAX_VALUE;
+import static java.lang.Long.MAX_VALUE;
 import org.junit.Assert;
 import org.junit.Test;
 import static java.lang.Math.PI;
@@ -16,8 +16,6 @@ import static java.lang.Math.PI;
 public class StaticImportAndImportTest {
 
     //静态导入的运用：
-
-
     /**
      * 使用普通导入
      * @param productId
@@ -38,8 +36,8 @@ public class StaticImportAndImportTest {
     @Test
     public void test2(Integer productId){
 
-        //assertTrue(productId >= 0);
-        //Assert.assertTrue(productId != null);
+        assertTrue(productId >= 0);
+        assertTrue(productId != null);
 
     }
 
