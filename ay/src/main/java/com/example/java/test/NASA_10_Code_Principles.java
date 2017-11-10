@@ -2,12 +2,20 @@ package com.example.java.test;
 
 
 /**
- * 描述：
+ * 描述：NASA 的 10 大编程规则
  * @author Ay
  * @date   2017-11-10
  */
 public class NASA_10_Code_Principles {
 
+    /*
+    美国宇航局（National Aeronautics and Space Administration，缩写为 NASA）是美国联邦政府的一个独立机构，
+    负责制定、实施美国的民用太空计划、与开展航空科学暨太空科学的研究。在太空计划之外，美国国家航空航天局还进行长期的民用以及军用航空航天研究。
+    在普通人的眼中，NASA 是一个很“高级”的机构，其成员包含大量不同领域的科学家和研究人员。与其他任何组织机构类似，NASA 的日常工作，
+    以及所执行的几乎全部项目也离不开计算机的辅助，出于需求的特殊性和重要性，他们所使用的很多计算机软件都是内部自行开发的，在一些重要项目的关键领域发挥着作用。
+    去年，一位前 NASA 实习生把美国阿波罗登月项目的 11 号计算机 --- 阿波罗导航计算机 (Apollo Guidance Computer) 系统源代码上传到了 GitHub，此举在开发者群体中引起了极大的热议。
+
+    */
 
     public static void main(String[] args) {
 
@@ -15,7 +23,7 @@ public class NASA_10_Code_Principles {
    /*
        原则1 – 简化控制流程（Simple Control Flow）
        用非常简单的控制流结构体来编写程序 — 不要用 setjmp 或者 longjmp 结构体，goto 语句，以及直接或间接的递归调用。
-       尽量避免：if else  , 递归等函数编写
+       尽量避免：if else  , 递归等函数编写  ,卫语句
 
        第 2 条规则 — 循环设置固定的上限
        所有的循环必须有一个固定的上限。对于检查工具来说，在给定循环次数的情况下，可以通过静态分析证实循环结果不超过预设的上限。
