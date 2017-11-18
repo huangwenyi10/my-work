@@ -32,9 +32,10 @@ public class Multimaps_index {
 
     @Test
     public void test2(){
-        List<Person> persons = Arrays.asList(
+        List<Person> persons = Lists.newArrayList(
                 new Person("zhang", 15),
-                new Person("wang", 16),
+                new Person("zhang", 16),
+                //new Person("wang", 16)
                 new Person("lee", 18)
         );
 
@@ -45,12 +46,12 @@ public class Multimaps_index {
         /**
          * 转换后的Map具有唯一键
          */
-        Map<String, Person> map = Maps.uniqueIndex(persons, new Function<Person, String>() {
-            @Override
-            public String apply(Person person) {
-                return person.getName();
-            }
-        });
+//        Map<String, Person> map = Maps.uniqueIndex(persons, new Function<Person, String>() {
+//            @Override
+//            public String apply(Person person) {
+//                return person.getName();
+//            }
+//        });
 
         /**
          * 转换后的Map有重复键
@@ -77,6 +78,15 @@ public class Multimaps_index {
         public int getAge() {
             return age;
         }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public void setAge(int age) {
+            this.age = age;
+        }
+
         @Override
         public String toString() {
             return "Person{" +
